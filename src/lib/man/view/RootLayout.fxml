@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.man.view.RootLayout">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleFileLogin" text="Login" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#handleFileExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnuLibrarian" disable="true" mnemonicParsing="false" text="Librarian">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleLibCheckoutBook" text="Check out Book" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnuAdmin" disable="true" mnemonicParsing="false" text="Admin">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleAdminMemberManagement" text="Member Management" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAdminBookManagement" text="Add Copy to Existed Book" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
